@@ -1,0 +1,432 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* CosmoTrace logo brand — Deep Blue #17448E + Golden Orange #CC851D + White */
+  --brand-blue: #17448e;
+  --brand-gold: #cc851d;
+  --background: #ffffff;
+  --foreground: #1a2438;
+  --primary: #17448e;
+  --primary-foreground: #ffffff;
+  --secondary: #17448e;
+  --secondary-foreground: #ffffff;
+  --accent: #cc851d;
+  --accent-foreground: #ffffff;
+  --accent-bright: #e5a84a;
+  --accent-deep: #a66d16;
+  --muted: #eef3fa;
+  --muted-foreground: #4a5c78;
+  --card: #ffffff;
+  --card-foreground: #1a2438;
+  --border: #d4e0ef;
+  --input: #d4e0ef;
+  --ring: #17448e;
+  --radius: 0.75rem;
+  --marketing-header-height: 4.75rem;
+  --font-sans: var(--font-montserrat), system-ui, sans-serif;
+
+  --navy-50: #eef3fa;
+  --navy-100: #dce7f4;
+  --navy-200: #b8cce8;
+  --navy-800: #17448e;
+  --navy-900: #123670;
+  --navy-950: #0d284f;
+
+  --gold-400: #e5a84a;
+  --gold-500: #cc851d;
+  --gold-600: #a66d16;
+
+  --teal-400: #3d6db5;
+  --teal-500: #17448e;
+  --teal-600: #123670;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--marketing-header-height);
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /** Enterprise hero — white base with balanced logo blue + gold accents */
+  .hero-gradient {
+    background-color: #ffffff;
+    background-image:
+      linear-gradient(180deg, #ffffff 0%, var(--muted) 100%),
+      radial-gradient(ellipse 70% 55% at 0% 20%, rgba(23, 68, 142, 0.1) 0%, transparent 58%),
+      radial-gradient(ellipse 55% 45% at 100% 10%, rgba(204, 133, 29, 0.08) 0%, transparent 52%);
+  }
+
+  .hero-gradient-dark {
+    background-color: var(--navy-950);
+    background-image:
+      linear-gradient(135deg, #0d284f 0%, var(--brand-blue) 55%, #0d284f 100%),
+      radial-gradient(ellipse 50% 40% at 100% 0%, rgba(204, 133, 29, 0.12) 0%, transparent 55%);
+  }
+
+  .hero-bg-stack {
+    isolation: isolate;
+  }
+
+  .hero-bg-mesh-a,
+  .hero-bg-mesh-b,
+  .hero-bg-mesh-c {
+    display: none;
+  }
+
+  .hero-bg-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 100% 78% at 50% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse 90% 60% at 50% 100%, rgba(15, 50, 80, 0.12) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  .hero-bg-user-media {
+    opacity: 0.09;
+    mix-blend-mode: soft-light;
+  }
+
+  @media (min-width: 640px) {
+    .hero-bg-user-media {
+      opacity: 0.12;
+    }
+  }
+
+  .section-gradient {
+    background: var(--muted);
+  }
+
+  .section-gradient-dark {
+    background: var(--navy-950);
+  }
+
+  .section-white {
+    background: var(--background);
+  }
+
+  .section-muted {
+    background: var(--muted);
+  }
+
+  .section-blue {
+    background: linear-gradient(180deg, var(--navy-50) 0%, #ffffff 100%);
+  }
+
+  .brand-strip {
+    height: 4px;
+    background: linear-gradient(90deg, var(--brand-blue) 0%, var(--brand-blue) 50%, var(--brand-gold) 50%, var(--brand-gold) 100%);
+  }
+
+  .industrial-grid {
+    background-image:
+      linear-gradient(rgba(23, 68, 142, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23, 68, 142, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .accent-border-l {
+    border-left: 3px solid transparent;
+    border-image: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%) 1;
+  }
+
+  .heading-accent-line {
+    position: relative;
+    display: inline-block;
+  }
+
+  .heading-accent-line::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+    border-radius: 2px;
+  }
+
+  .icon-accent-bg {
+    background: linear-gradient(135deg, rgba(23, 68, 142, 0.1) 0%, rgba(204, 133, 29, 0.12) 100%);
+  }
+
+  .card-hover {
+    transition:
+      transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(26, 43, 72, 0.1);
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card-hover {
+      transition-duration: 0.01ms;
+    }
+
+    .card-hover:hover {
+      transform: none;
+    }
+
+    .hero-bg-mesh-a,
+    .hero-bg-mesh-b,
+    .hero-bg-mesh-c {
+      animation: none !important;
+      opacity: 0.32;
+    }
+
+    .hero-bg-user-media {
+      opacity: 0.06;
+    }
+  }
+
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #e5a84a 0%, #cc851d 50%, #a66d16 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .navy-gradient-text {
+    background: linear-gradient(135deg, #17448e 0%, #3d6db5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .workflow-connector {
+    position: relative;
+  }
+
+  .workflow-connector::after {
+    content: '';
+    position: absolute;
+    right: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: linear-gradient(90deg, #cc851d, #17448e);
+  }
+
+  .blob-navy {
+    background: radial-gradient(ellipse at center, rgba(26, 43, 72, 0.18) 0%, transparent 70%);
+    filter: blur(40px);
+  }
+
+  .prose-pharma {
+    max-width: 72ch;
+  }
+
+  .prose-pharma h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prose-pharma h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose-pharma p {
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 1rem;
+  }
+
+  .prose-pharma ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose-pharma li {
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 0.25rem;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 2px;
+  }
+
+  .nav-link-underline {
+    position: relative;
+  }
+
+  .nav-link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 200ms ease;
+  }
+
+  .nav-link-underline:hover::after {
+    width: 100%;
+  }
+
+  .nav-link-underline.active::after {
+    width: 100%;
+  }
+
+  .service-card-glow:hover {
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent), 0 12px 32px rgba(26, 43, 72, 0.1);
+  }
+
+  .compliance-badge {
+    background: rgba(23, 68, 142, 0.08);
+    border: 1px solid rgba(23, 68, 142, 0.18);
+    color: var(--primary);
+  }
+
+  .admin-sidebar-item {
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+
+  .admin-sidebar-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .admin-sidebar-item.active {
+    background-color: rgba(41, 171, 226, 0.15);
+    border-left: 3px solid var(--accent);
+  }
+
+  .table-row-hover:hover {
+    background-color: rgba(248, 250, 252, 0.8);
+  }
+
+  .metric-positive {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.05) 100%);
+    border-color: rgba(16, 185, 129, 0.2);
+  }
+
+  .metric-warning {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.05) 100%);
+    border-color: rgba(245, 158, 11, 0.25);
+  }
+
+  .metric-alert {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(220, 38, 38, 0.05) 100%);
+    border-color: rgba(239, 68, 68, 0.2);
+  }
+
+  .metric-primary {
+    background: linear-gradient(135deg, rgba(26, 43, 72, 0.08) 0%, rgba(41, 171, 226, 0.06) 100%);
+    border-color: rgba(26, 43, 72, 0.2);
+  }
+
+  .metric-accent {
+    background: linear-gradient(135deg, rgba(214, 143, 41, 0.12) 0%, rgba(184, 115, 26, 0.06) 100%);
+    border-color: rgba(214, 143, 41, 0.28);
+  }
+
+  .text-hero-xl {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .text-section-title {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+  }
+}
+
+@keyframes hero-mesh-drift-a {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  100% {
+    transform: translate(-2.8%, 2.2%) scale(1.07) rotate(5deg);
+  }
+}
+
+@keyframes hero-mesh-drift-b {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(3.5%, -3%) scale(1.09);
+  }
+}
+
+@keyframes hero-mesh-drift-c {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.02);
+  }
+}
+
+@layer components {
+  .cta-pill {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold text-white uppercase tracking-wide text-[11px] sm:text-xs px-6 sm:px-8 py-3 sm:py-3.5 transition-all duration-150 active:scale-[0.98];
+    background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent) 48%, var(--accent-deep) 100%);
+    box-shadow: 0 4px 18px rgba(204, 133, 29, 0.35);
+  }
+
+  .cta-pill:hover {
+    filter: brightness(1.06);
+  }
+
+  .cta-pill-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-medium uppercase tracking-wide text-[11px] sm:text-xs px-6 sm:px-8 py-3 sm:py-3.5 transition-all duration-150 active:scale-[0.98] border bg-white text-primary;
+    border-color: color-mix(in srgb, var(--primary) 20%, var(--border));
+  }
+
+  .cta-pill-outline:hover {
+    background-color: color-mix(in srgb, var(--muted) 80%, white);
+  }
+
+  .nav-pill {
+    @apply text-[11px] sm:text-xs font-semibold uppercase tracking-[0.12em] hover:text-primary transition-colors duration-150;
+    /* @apply cannot use opacity modifiers (e.g. text-foreground/90) with CSS-variable colors */
+    color: color-mix(in srgb, var(--foreground) 90%, transparent);
+  }
+}
