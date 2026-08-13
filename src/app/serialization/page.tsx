@@ -17,7 +17,7 @@ export default function SerializationPage() {
   return (
     <MarketingPageShell>
       <PageHero
-        badge="Serialization Enablement"
+        badge="Serialization Operations"
         title={
           <>
             GS1-Compliant{' '}

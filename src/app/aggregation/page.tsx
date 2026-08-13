@@ -17,7 +17,7 @@ export default function AggregationPage() {
   return (
     <MarketingPageShell>
       <PageHero
-        badge="Aggregation Enablement"
+        badge="Aggregation Operations"
         title={
           <>
             Unit to Pallet{' '}

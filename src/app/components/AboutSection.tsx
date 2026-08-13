@@ -12,7 +12,7 @@ import { operationImages } from '@/lib/images';
 
 const capabilities = [
   { icon: Warehouse, label: 'Pharmaceutical-grade warehousing & cold chain storage' },
-  { icon: ShieldCheck, label: 'End-to-end track & trace readiness' },
+  { icon: ShieldCheck, label: 'End-to-end track & trace operations' },
   { icon: ClipboardCheck, label: 'GS1, EPCIS & Tatmeen compliant reporting' },
   { icon: Database, label: 'Secure data handling & batch visibility' },
   { icon: CheckCircle2, label: 'Seamless integration with existing operations' },
@@ -32,18 +32,18 @@ export default function AboutSection({ compact = false }: AboutSectionProps) {
             About CosmoTrace CPO
           </div>
           <h2 className="text-section-title font-extrabold text-foreground mb-5 text-balance heading-accent-line" style={{ fontWeight: 800 }}>
-            Enabled... Not Performed.
+            Operations Performed — End to End.
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-5 mt-4">
-            CosmoTrace CPO is a UAE-based pharmaceutical Contract Packaging Organization
-            specializing in serialization enablement, aggregation readiness, compliant
-            warehousing, and track-and-trace infrastructure.
+            CosmoTrace CPO is a UAE-based pharmaceutical operations and compliance provider
+            specializing in serialization, aggregation, compliant warehousing, and
+            track-and-trace infrastructure.
           </p>
           <p className="text-base text-muted-foreground leading-relaxed mb-8">
             We help pharmaceutical companies simplify compliance and scale operations
             across the UAE & GCC — at our UAE Free Zone Facility.{' '}
             <strong className="text-foreground font-semibold">
-              You bring the products. We provide the infrastructure, operations & compliance readiness.
+              You bring the products. We provide the infrastructure, operations & compliance.
             </strong>
           </p>
 

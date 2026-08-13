@@ -11,7 +11,7 @@ export const services = [
   {
     id: 'serialization',
     icon: QrCode,
-    title: 'Serialization Enablement',
+    title: 'Serialization Operations',
     desc: 'GS1-compliant serial number generation, commissioning and verification, EPCIS file generation, and Tatmeen reporting readiness.',
     highlights: ['GS1-Compliant', 'EPCIS Ready', 'Tatmeen Reporting', 'Line Integration'],
     href: '/serialization',
@@ -20,7 +20,7 @@ export const services = [
   {
     id: 'aggregation',
     icon: Layers,
-    title: 'Aggregation Enablement',
+    title: 'Aggregation Operations',
     desc: 'Complete packaging hierarchy traceability: Unit packs → Bundles → Cases → Pallets with scanning, verification, and relabeling.',
     highlights: ['Unit → Case → Pallet', 'Verification', 'Relabeling', 'Hierarchy Mgmt'],
     href: '/aggregation',

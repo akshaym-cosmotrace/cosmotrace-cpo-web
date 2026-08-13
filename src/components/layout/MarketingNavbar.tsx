@@ -135,12 +135,6 @@ export default function MarketingNavbar() {
                   <span className="truncate">info@cosmotrace.com</span>
                 </a>
               </div>
-              <Link
-                href="/admin-dashboard"
-                className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors px-1"
-              >
-                Admin
-              </Link>
               <Link href="/contact" className="cta-pill !normal-case !tracking-wide text-xs px-5 py-2.5 shadow-md shadow-accent/10">
                 Request consultation
               </Link>
