@@ -36,7 +36,7 @@ export default function AboutSection({ compact = false }: AboutSectionProps) {
           </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-5 mt-4">
             CosmoTrace CPO is a UAE-based pharmaceutical operations and compliance provider
-            specializing in serialization, aggregation, compliant warehousing, and
+            specializing in aggregation, compliant warehousing, and
             track-and-trace infrastructure.
           </p>
           <p className="text-base text-muted-foreground leading-relaxed mb-8">

@@ -12,7 +12,7 @@ const platformFeatures = [
   {
     icon: ShieldCheck,
     title: 'Compliance-Ready',
-    desc: 'Supports Tatmeen, GS1, EPCIS, and GCC serialization mandates.',
+    desc: 'Supports Tatmeen, GS1, EPCIS, and GCC traceability mandates.',
     color: 'text-primary',
     bg: 'icon-accent-bg',
   },
@@ -40,7 +40,7 @@ const platformFeatures = [
   {
     icon: Database,
     title: 'Traceability Infrastructure',
-    desc: 'nTrack platform supports serialization, aggregation, and EPCIS event management.',
+    desc: 'nTrack platform supports aggregation and EPCIS event management.',
     color: 'text-primary',
     bg: 'icon-accent-bg',
   },
@@ -54,8 +54,8 @@ const platformFeatures = [
 ];
 
 const workflowSteps = [
-  { label: 'Serialize', step: '01' },
-  { label: 'Aggregate', step: '02' },
+  { label: 'Aggregate', step: '01' },
+  { label: 'Warehouse', step: '02' },
   { label: 'Report', step: '03' },
   { label: 'Comply', step: '04' },
 ];
@@ -77,12 +77,12 @@ export default function PlatformSection() {
           Technology Supporting Compliance Operations
         </h2>
         <p className="text-base text-muted-foreground max-w-2xl mx-auto mt-4">
-          Our nTrack platform supports serialization, aggregation, and regulatory reporting —
+          Our nTrack platform supports aggregation and regulatory reporting —
           integrated with warehouse and logistics operations at our UAE facility.
         </p>
       </motion.div>
 
-      <ProcessFlowDiagram title="Serialization & Reporting Workflow" steps={workflowSteps} className="mb-12" />
+      <ProcessFlowDiagram title="Aggregation & Reporting Workflow" steps={workflowSteps} className="mb-12" />
 
       <motion.div
         variants={staggerContainer(0.08, 0.08)}

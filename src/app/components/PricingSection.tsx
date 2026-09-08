@@ -13,7 +13,7 @@ const pricingModels = [
     icon: Zap,
     title: 'Pay-Per-Use',
     subtitle: 'Flexible Operational Model',
-    desc: 'Transparent per-pack pricing aligned with your actual serialization volume.',
+    desc: 'Transparent per-pack pricing aligned with your actual operational volume.',
     features: [
       'Transparent per-pack pricing',
       'No minimum volume commitment',
@@ -57,7 +57,7 @@ export default function PricingSection() {
           Pricing Built for Pharmaceutical Scale
         </h2>
         <p className="text-base text-muted-foreground max-w-2xl mx-auto mt-4">
-          Flexible commercial models designed to match your serialization volume and operational maturity.
+          Flexible commercial models designed to match your operational volume and operational maturity.
         </p>
       </motion.div>
 

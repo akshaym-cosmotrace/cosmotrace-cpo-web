@@ -8,7 +8,7 @@ import { buildPageMetadata } from '@/lib/metadata';
 export const metadata = buildPageMetadata({
   title: 'Digital Operations Platform',
   description:
-    'nTrack platform supporting serialization, aggregation, and regulatory reporting — integrated with CosmoTrace warehouse and compliance operations.',
+    'nTrack platform supporting aggregation and regulatory reporting — integrated with CosmoTrace warehouse and compliance operations.',
   path: '/platform',
 });
 
@@ -23,10 +23,9 @@ export default function PlatformPage() {
             <span className="text-primary">Compliance Operations</span>
           </>
         }
-        description="The nTrack platform integrates with our warehouse and serialization operations — supporting EPCIS event management, traceability workflows, and regulatory reporting without replacing operational infrastructure."
+        description="The nTrack platform integrates with our warehouse and aggregation operations — supporting EPCIS event management, traceability workflows, and regulatory reporting without replacing operational infrastructure."
         variant="light"
         primaryCta={{ label: 'Discuss platform integration', href: '/contact' }}
-        secondaryCta={{ label: 'View serialization', href: '/serialization' }}
       />
       <PlatformSection />
       <CTABand

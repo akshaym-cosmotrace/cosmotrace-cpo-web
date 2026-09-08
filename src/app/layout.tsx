@@ -20,7 +20,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'CosmoTrace — Pharmaceutical Warehousing & Compliance Operations',
   description:
-    'CosmoTrace CPO delivers pharmaceutical serialization, aggregation, compliant warehousing, and track-and-trace operations for UAE & GCC markets from our Free Zone facility.',
+    'CosmoTrace CPO delivers pharmaceutical aggregation, compliant warehousing, and track-and-trace operations for UAE & GCC markets from our Free Zone facility.',
   icons: {
     icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
   },

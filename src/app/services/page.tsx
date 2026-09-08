@@ -2,7 +2,6 @@ import React from 'react';
 import MarketingPageShell from '@/components/marketing/MarketingPageShell';
 import PageHero from '@/components/marketing/PageHero';
 import ServicesSection from '../components/ServicesSection';
-import PricingSection from '../components/PricingSection';
 import CTABand from '@/components/marketing/CTABand';
 import { buildPageMetadata } from '@/lib/metadata';
 import { operationImages } from '@/lib/images';
@@ -10,7 +9,7 @@ import { operationImages } from '@/lib/images';
 export const metadata = buildPageMetadata({
   title: 'Pharmaceutical Services',
   description:
-    'End-to-end pharmaceutical packaging, serialization, warehousing, cold chain storage, and traceability services at our UAE Free Zone facility.',
+    'End-to-end pharmaceutical packaging, warehousing, cold chain storage, and traceability services at our UAE Free Zone facility.',
   path: '/services',
 });
 
@@ -25,7 +24,7 @@ export default function ServicesPage() {
             <span className="gold-gradient-text">Operations</span>
           </>
         }
-        description="Serialization, aggregation, warehousing, logistics, and compliance operations — integrated under one UAE Free Zone roof."
+        description="Aggregation, warehousing, logistics, and compliance operations — integrated under one UAE Free Zone roof."
         variant="image-right"
         imageSrc={operationImages.palletHandling}
         imageAlt="Pharmaceutical pallet handling and logistics operations"
@@ -33,7 +32,6 @@ export default function ServicesPage() {
         secondaryCta={{ label: 'View compliance', href: '/compliance' }}
       />
       <ServicesSection />
-      <PricingSection />
       <CTABand
         title="Need a tailored service proposal?"
         description="Our operations team will assess your volume, compliance requirements, and logistics needs."

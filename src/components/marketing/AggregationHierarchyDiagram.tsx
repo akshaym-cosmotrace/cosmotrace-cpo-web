@@ -2,7 +2,7 @@ import React from 'react';
 import { Package, Boxes, Layers, Warehouse } from 'lucide-react';
 
 const tiers = [
-  { label: 'Unit Pack', icon: Package, desc: 'Individual serialized item' },
+  { label: 'Unit Pack', icon: Package, desc: 'Individual unit pack' },
   { label: 'Bundle / Case', icon: Boxes, desc: 'Secondary aggregation level' },
   { label: 'Pallet', icon: Layers, desc: 'SSCC-labelled logistics unit' },
   { label: 'Warehouse', icon: Warehouse, desc: 'Stored & traceable inventory' },

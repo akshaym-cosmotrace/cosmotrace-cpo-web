@@ -14,7 +14,7 @@ export default function MarketingFooter() {
               <BrandLogo theme="dark" showTagline={false} className="pointer-events-auto" />
             </div>
             <p className="text-sm text-slate-400 leading-relaxed mb-6">
-              Your trusted pharmaceutical CPO partner. Serialization, aggregation, warehousing,
+              Your trusted pharmaceutical CPO partner. Aggregation, warehousing,
               and compliance operations for UAE & GCC markets.
             </p>
             <div className="space-y-2.5">
@@ -94,7 +94,7 @@ export default function MarketingFooter() {
               Get In Touch
             </h3>
             <p className="text-sm text-slate-400 leading-relaxed mb-5">
-              Ready to simplify pharmaceutical serialization for your UAE or GCC operations?
+              Ready to simplify pharmaceutical operations for your UAE or GCC operations?
             </p>
             <Link href="/contact" className="cta-pill">
               Request consultation

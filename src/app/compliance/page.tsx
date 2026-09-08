@@ -23,10 +23,9 @@ export default function CompliancePage() {
             <span className="text-primary">Built Into Operations</span>
           </>
         }
-        description="CosmoTrace infrastructure supports GS1, EPCIS, UAE Tatmeen, GCC traceability mandates, and DSCSA-ready architecture — integrated with warehouse and serialization operations."
+        description="CosmoTrace infrastructure supports GS1, EPCIS, UAE Tatmeen, GCC traceability mandates, and DSCSA-ready architecture — integrated with warehouse and aggregation operations."
         variant="light"
         primaryCta={{ label: 'Discuss compliance requirements', href: '/contact' }}
-        secondaryCta={{ label: 'View serialization', href: '/serialization' }}
       />
       <ComplianceSection />
       <CTABand

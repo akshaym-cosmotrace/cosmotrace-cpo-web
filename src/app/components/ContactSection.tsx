@@ -39,14 +39,30 @@ export default function ContactSection({ standalone = false }: ContactSectionPro
     reset,
   } = useForm<ContactFormData>({ defaultValues: { requestType: [] } });
 
-  const onSubmit = async () => {
+  const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1400));
-    setIsSubmitting(false);
-    setSubmitted(true);
-    toast.success('Consultation request submitted. Our team will contact you within 24–48 hours.');
-    reset();
-    setTimeout(() => setSubmitted(false), 5000);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const result = (await response.json().catch(() => null)) as { error?: string } | null;
+
+      if (!response.ok) {
+        toast.error(result?.error || 'Unable to send your request. Please try again or email us directly.');
+        return;
+      }
+
+      setSubmitted(true);
+      toast.success('Consultation request submitted. Our team will contact you within 24–48 hours.');
+      reset();
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch {
+      toast.error('Unable to send your request. Please try again or email us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const content = (
@@ -59,7 +75,7 @@ export default function ContactSection({ standalone = false }: ContactSectionPro
           Simplify GCC Pharmaceutical Operations with CosmoTrace
         </h2>
         <p className="text-base text-muted-foreground leading-relaxed mb-8 max-w-xl mt-4">
-          Let's discuss serialization, warehousing, and compliance for your UAE and GCC operations.
+          Let's discuss aggregation, warehousing, and compliance for your UAE and GCC operations.
           Our team responds within 24–48 hours.
         </p>
 
@@ -68,7 +84,7 @@ export default function ContactSection({ standalone = false }: ContactSectionPro
             { label: '24–48 Hour Response', sub: 'Direct response from our pharmaceutical compliance team' },
             { label: 'UAE Free Zone Facility Tour', sub: 'Schedule an in-person or virtual facility walkthrough' },
             { label: 'Custom Pricing Proposal', sub: 'Volume-based pricing aligned to your operations' },
-            { label: 'Integration Assessment', sub: 'Technical review of your existing ERP and serialization systems' },
+            { label: 'Integration Assessment', sub: 'Technical review of your existing ERP and traceability systems' },
           ].map((item) => (
             <div key={item.label} className="flex items-start gap-3">
               <CheckCircle2 size={18} className="text-accent mt-0.5 flex-shrink-0" />
@@ -194,7 +210,7 @@ export default function ContactSection({ standalone = false }: ContactSectionPro
                   {...register('message')}
                   rows={4}
                   className="w-full px-3.5 py-2.5 text-sm border border-border rounded-lg outline-none focus:border-primary resize-none bg-white text-foreground"
-                  placeholder="Tell us about your serialization requirements, monthly pack volumes, and compliance challenges..."
+                  placeholder="Tell us about your aggregation requirements, monthly pack volumes, and compliance challenges..."
                 />
               </div>
               <button type="submit" disabled={isSubmitting} className="w-full cta-pill disabled:opacity-60 disabled:cursor-not-allowed">
