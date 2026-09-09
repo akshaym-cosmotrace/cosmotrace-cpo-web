@@ -2,8 +2,10 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 const TO_EMAIL = 'zeeshan@cosmotrace.com';
-const CC_EMAIL = 'shamnas@cosmotrace.com';
-
+const CC_EMAIL = [
+  'shamnas@cosmotrace.com',
+  'akshay@cosmotrace.com',
+];
 const requestTypeLabels: Record<string, string> = {
   consultation: 'Request a consultation',
   walkthrough: 'Schedule a facility walkthrough',
@@ -97,7 +99,7 @@ export async function POST(request: Request) {
   const { error } = await resend.emails.send({
     from,
     to: [TO_EMAIL],
-    cc: [CC_EMAIL],
+    cc: CC_EMAIL,
     replyTo: email,
     subject,
     text,
