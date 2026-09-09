@@ -12,6 +12,11 @@ const nextConfig = {
         destination: '/blog',
         permanent: true,
       },
+      {
+        source: '/serialization',
+        destination: '/aggregation',
+        permanent: true,
+      },
     ];
   },
 

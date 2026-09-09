@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Globe, TrendingUp, MinusCircle, Eye, CreditCard, Headphones, Warehouse } from 'lucide-react';
+import { Globe, TrendingUp, MinusCircle, CreditCard, Headphones, Warehouse } from 'lucide-react';
 import SectionShell from '@/components/marketing/SectionShell';
 import { fadeUp, staggerContainer, transition, viewport } from '@/lib/motion';
 
@@ -39,14 +39,6 @@ const reasons = [
     desc: 'We handle compliance updates and operational complexity — your team focuses on core pharmaceutical business.',
     color: 'text-emerald-600',
     bg: 'bg-emerald-50',
-  },
-  {
-    id: 'e2e-visibility',
-    icon: Eye,
-    title: 'End-to-End Visibility',
-    desc: 'Real-time track & trace from inbound receipt through serialization, warehousing, and outbound dispatch.',
-    color: 'text-primary',
-    bg: 'bg-muted',
   },
   {
     id: 'flexible-commercial',

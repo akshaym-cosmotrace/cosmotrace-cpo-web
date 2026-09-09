@@ -2,21 +2,12 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { QrCode, Layers, Warehouse, Truck, Thermometer, PackageCheck, ClipboardCheck } from 'lucide-react';
+import { Layers, Warehouse, Truck, Thermometer, PackageCheck, ClipboardCheck } from 'lucide-react';
 import OperationalCard from '@/components/marketing/OperationalCard';
 import SectionShell from '@/components/marketing/SectionShell';
 import { fadeUp, staggerContainer, viewport } from '@/lib/motion';
 
 export const services = [
-  {
-    id: 'serialization',
-    icon: QrCode,
-    title: 'Serialization Operations',
-    desc: 'GS1-compliant serial number generation, commissioning and verification, EPCIS file generation, and Tatmeen reporting readiness.',
-    highlights: ['GS1-Compliant', 'EPCIS Ready', 'Tatmeen Reporting', 'Line Integration'],
-    href: '/serialization',
-    accent: 'navy' as const,
-  },
   {
     id: 'aggregation',
     icon: Layers,
@@ -97,7 +88,7 @@ export default function ServicesSection({ overview = false, limit }: ServicesSec
           End-to-End Pharmaceutical Operations
         </h2>
         <p className="text-base text-muted-foreground max-w-2xl mx-auto mt-4">
-          Integrated packaging, serialization, warehousing, and traceability operations — all
+          Integrated packaging, warehousing, and traceability operations — all
           under one UAE Free Zone roof.
         </p>
       </motion.div>

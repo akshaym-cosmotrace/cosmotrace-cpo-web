@@ -1,11 +1,9 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Globe, FileCode, Network, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Globe, FileCode, Network } from 'lucide-react';
 import SectionShell from '@/components/marketing/SectionShell';
-import ProcessFlowDiagram from '@/components/marketing/ProcessFlowDiagram';
 import { fadeUp, staggerContainer, transition, viewport } from '@/lib/motion';
 
 const standards = [
@@ -34,7 +32,7 @@ const standards = [
     icon: ShieldCheck,
     title: 'UAE Tatmeen',
     subtitle: 'UAE National Track & Trace',
-    desc: 'Full Tatmeen integration for UAE pharmaceutical market — from serialization to dispensing event reporting.',
+    desc: 'Full Tatmeen integration for UAE pharmaceutical market — from aggregation to dispensing event reporting.',
     tags: ['UAE MOH', 'Tatmeen Portal', 'EPCIS Reports', 'Real-time'],
     color: 'text-emerald-600',
     bg: 'bg-emerald-50',
@@ -44,20 +42,11 @@ const standards = [
     icon: Network,
     title: 'GCC Traceability',
     subtitle: 'Gulf Cooperation Council',
-    desc: 'Supports serialization mandates across all GCC markets including Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman.',
+    desc: 'Supports traceability mandates across all GCC markets including Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman.',
     tags: ['Saudi SFDA', 'Qatar MOPH', 'Kuwait MOH', 'Bahrain NHRA'],
     color: 'text-gold-600',
     bg: 'bg-gold-500/10',
   },
-];
-
-const workflowNodes = [
-  { label: 'Manufacture', step: '01' },
-  { label: 'Serialize', step: '02' },
-  { label: 'Aggregate', step: '03' },
-  { label: 'Warehouse', step: '04' },
-  { label: 'Distribute', step: '05' },
-  { label: 'Dispense', step: '06' },
 ];
 
 type ComplianceSectionProps = {
@@ -85,12 +74,6 @@ export default function ComplianceSection({ compact = false }: ComplianceSection
           UAE Tatmeen, GCC traceability mandates, and DSCSA-ready architecture.
         </p>
       </motion.div>
-
-      <ProcessFlowDiagram
-        title="End-to-End Pharmaceutical Traceability Workflow"
-        steps={workflowNodes}
-        className="mb-10"
-      />
 
       {!compact && (
         <motion.div
@@ -125,31 +108,6 @@ export default function ComplianceSection({ compact = false }: ComplianceSection
           ))}
         </motion.div>
       )}
-
-      <motion.div
-        variants={fadeUp(16)}
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewport}
-        className="mt-8 bg-white border border-border rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4 accent-border-l shadow-card"
-      >
-        <div className="flex items-center gap-3">
-          <ShieldCheck size={20} className="text-primary flex-shrink-0" />
-          <div>
-            <p className="text-sm font-bold text-foreground">DSCSA-Ready Architecture</p>
-            <p className="text-xs text-muted-foreground">
-              Future-proofed infrastructure supporting US Drug Supply Chain Security Act requirements.
-            </p>
-          </div>
-        </div>
-        <Link
-          href={compact ? '/compliance' : '/contact'}
-          className="flex-shrink-0 text-sm font-semibold text-primary hover:text-accent transition-colors flex items-center gap-1"
-        >
-          {compact ? 'View compliance details' : 'Learn more'}
-          <ArrowRight size={14} />
-        </Link>
-      </motion.div>
     </SectionShell>
   );
 }

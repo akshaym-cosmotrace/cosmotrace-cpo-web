@@ -49,12 +49,12 @@ export default function AggregationContent() {
               Packaging Hierarchy Traceability
             </h2>
             <p className="text-muted-foreground leading-relaxed mt-4 mb-6">
-              Complete aggregation operations from unit-level serialization through to pallet-level
+              Complete aggregation operations from unit pack level through to pallet-level
               logistics units — with scanning, verification, and hierarchy management at our UAE facility.
             </p>
             <ul className="space-y-3">
               {[
-                'Unit pack serialization with parent-child linking',
+                'Unit pack traceability with parent-child linking',
                 'Case and pallet SSCC generation and verification',
                 'Relabeling and hierarchy correction workflows',
                 'EPCIS aggregation event capture and exchange',

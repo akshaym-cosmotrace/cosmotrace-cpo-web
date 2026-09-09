@@ -44,7 +44,7 @@ export default function BrandLogo({
 
       {showTagline && (
         <span className={`hidden md:flex flex-col justify-center border-l pl-3 lg:pl-4 ${dividerClass}`}>
-          <span className={taglineClass}>CPO · Serialization</span>
+          <span className={taglineClass}>CPO · Operations</span>
           <span
             className={`text-[9px] mt-0.5 uppercase tracking-wider ${
               theme === 'dark' ? 'text-slate-500' : 'text-muted-foreground/80'

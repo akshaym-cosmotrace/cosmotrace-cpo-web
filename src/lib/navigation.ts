@@ -15,7 +15,6 @@ export const primaryNav: NavItem[] = [
     href: '/services',
     children: [
       { label: 'Overview', href: '/services' },
-      { label: 'Serialization', href: '/serialization' },
       { label: 'Aggregation', href: '/aggregation' },
       { label: 'Warehousing', href: '/warehousing' },
     ],
@@ -37,7 +36,6 @@ export const footerQuickLinks: NavLink[] = [
 ];
 
 export const footerServiceLinks: NavLink[] = [
-  { label: 'Serialization', href: '/serialization' },
   { label: 'Aggregation', href: '/aggregation' },
   { label: 'Warehousing', href: '/warehousing' },
   { label: 'UAE Tatmeen', href: '/compliance' },
@@ -53,7 +51,6 @@ export function isNavActive(pathname: string, href: string): boolean {
 export function isServicesActive(pathname: string): boolean {
   return (
     pathname === '/services' ||
-    pathname.startsWith('/serialization') ||
     pathname.startsWith('/aggregation') ||
     pathname.startsWith('/warehousing')
   );

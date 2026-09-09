@@ -5,15 +5,7 @@ import Link from 'next/link';
 import { ArrowRight, Calendar } from 'lucide-react';
 import AppImage from '@/components/ui/AppImage';
 import TrustBadges from '@/components/marketing/TrustBadges';
-import ProcessFlowDiagram from '@/components/marketing/ProcessFlowDiagram';
 import { operationImages } from '@/lib/images';
-
-const workflowSteps = [
-  { label: 'Serialize', step: '01' },
-  { label: 'Aggregate', step: '02' },
-  { label: 'Warehouse', step: '03' },
-  { label: 'Dispatch', step: '04' },
-];
 
 export default function HeroSection() {
   return (
@@ -37,9 +29,9 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mb-8">
-              CosmoTrace CPO delivers serialization, aggregation, compliant warehousing, and
-              logistics operations from our UAE Free Zone facility — with the digital infrastructure
-              to keep your supply chain audit-ready.
+              CosmoTrace CPO delivers aggregation, compliant warehousing, and logistics
+              operations from our UAE Free Zone facility — with the digital infrastructure to keep
+              your supply chain audit-ready.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-10">
@@ -70,13 +62,6 @@ export default function HeroSection() {
               <p className="text-white text-sm font-semibold mb-1">UAE Free Zone Facility</p>
               <p className="text-white/85 text-xs">Pharma-grade storage · Cold chain · Batch traceability</p>
             </div>
-          </div>
-        </div>
-
-        <div className="mt-16 border border-[#17448E]/12 rounded-2xl overflow-hidden shadow-card">
-          <div className="h-1 brand-strip" aria-hidden />
-          <div className="p-6 lg:p-8 bg-white">
-            <ProcessFlowDiagram title="Operational Traceability Workflow" steps={workflowSteps} />
           </div>
         </div>
       </div>

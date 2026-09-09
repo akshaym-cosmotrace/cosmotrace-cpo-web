@@ -7,7 +7,7 @@ import { buildPageMetadata } from '@/lib/metadata';
 export const metadata = buildPageMetadata({
   title: 'Contact CosmoTrace CPO',
   description:
-    'Request a consultation, schedule a facility walkthrough, or discuss serialization, warehousing, and compliance requirements for your UAE & GCC operations.',
+    'Request a consultation, schedule a facility walkthrough, or discuss warehousing and compliance requirements for your UAE & GCC operations.',
   path: '/contact',
 });
 
